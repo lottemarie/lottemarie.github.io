@@ -1,37 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-	<title>Kosmos</title>
-</head>
+---
+layout: layout.html 
+---
 
-<body>
-	<h1> Kosmos</h1>
-	<div>
+{% for post in collections.post %}
 
-
-
-<h2>Post Title no3</h2>
-<h2> Altona </h2>
-<h2> Fri Feb 09 2024 01:00:00 GMT+0100 (Mitteleuropäische Normalzeit) </h2>
-
-
-
-<h2>Post Title no2</h2>
-<h2> Winterhude </h2>
-<h2> Mon Mar 25 2024 01:00:00 GMT+0100 (Mitteleuropäische Normalzeit) </h2>
-
-
-
-<h2>Post Title no1</h2>
-<h2> Barmbek </h2>
-<h2> Tue Nov 12 2024 01:00:00 GMT+0100 (Mitteleuropäische Normalzeit) </h2>
-
-
-
-</div>
-</body>
-</html>
+<p> {{post.data.date}} </p>
+<p> {{post.data.ort}} </p>
+<p> {{post.data.plz}} </p>
