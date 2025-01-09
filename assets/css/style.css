@@ -3,10 +3,6 @@
 	padding: 0;
 }
 
-body{
-	font-family: "CompagnonLight";
-}
-
 .container{
 
 }
@@ -14,3 +10,481 @@ body{
 .item{
 	
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+  }
+
+  h1 {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 0;
+		padding: 10px;
+		font-family: "CompagnonLight"; 
+		font-weight: normal;
+		text-align: center;
+		text-transform: lowercase;
+		font-size: 100px;
+		color: rgb(255, 255, 255);
+		text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255);
+	}
+	
+  
+/* Allgemeine Eigenschaften */
+  .solar-system {
+    position: relative;
+    height: 1000px;
+    width: 1000px;
+  }
+  
+  .sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .sun-text {
+    font-family: "CompagnonItalic";
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(126, 243, 155);
+    text-align: center;
+}
+
+
+
+  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgb(126, 243, 155);
+    border-radius: 50%;
+  }
+  
+/* Links initial ausblenden */
+.link {
+  display: none;
+  position: absolute; /* Absolut positioniert relativ zum umgebenden Planeten */
+  top: 50%; /* Position über dem Planeten */
+  left: 50%;
+  transform: translate(-50%, -150%); /* Zentriert über dem Planeten */
+  background-color: rgba(0, 0, 0, 0.8); /* Hintergrundfarbe */
+  color: white; /* Textfarbe */
+  padding: 5px 10px; /* Innenabstand */
+  border-radius: 5px; /* Abgerundete Ecken */
+  text-decoration: none; /* Kein Unterstrich im Text */
+  z-index: 100; /* Stellt sicher, dass der Link über anderen Elementen liegt */
+}
+
+/* Link sichtbar, wenn die Klasse "active" hinzugefügt wird */
+.link.active {
+  display: block;
+}
+
+
+  /* Planeten*/
+  .planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: blue;
+    border-radius: 50%;
+    transform-origin: -150px;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: inset -20px -20px 30px rgba(0, 0, 0, 0.5), 
+                20px 20px 50px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    z-index: 1
+  }
+
+
+  .planet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: invert(100%); /* Invertiere die Farben */
+    transition: filter 0.3s ease; /* Sanfter Übergang */
+  
+}
+
+
+
+  .one {
+    height: 400px; 
+    width: 400px;
+    background-color: rgb(213, 146, 70);
+}
+
+  .two {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(166, 226, 77);
+  }
+  .three {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(40, 169, 212);
+  } 
+  .four {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(143, 130, 227);
+    }
+
+  .five {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(242, 107, 188);
+  }
+  .six {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(229, 69, 128);
+ }
+  .seven {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(242, 107, 107);
+  }
+
+
+
+/* Hover-Effekte*/ 
+
+.planet:hover {
+  transform: translate(-50%, -50%) scale(5);
+  animation-play-state: paused;
+  transform: translate(-50%, -50%) scale(1.5);
+  filter: none;
+  z-index: ;
+}
+
+.planet img:hover {
+filter: none;
+}
+
+  /* Different orbits for each planet */
+  .orbit:nth-child(2) {
+    height: 400px;
+    width: 400px;
+  }
+  
+  .orbit:nth-child(3) {
+    height: 800px;
+    width: 800px;
+  }
+  
+  .orbit:nth-child(4) {
+    height: 900px;
+    width: 100px;
+  }
+  
+  .orbit:nth-child(5) {
+    height: 100px;
+    width: 1100px;
+  }
+ 
+  .orbit:nth-child(6) {
+    height: 500px;
+    width: 900px;
+  }
+  .orbit:nth-child(7) {
+    height: 1100px;
+    width: 100px;
+  }
+ 
+  .orbit:nth-child(8) {
+    height: 890px;
+    width: 890px;
+  }
+  .orbit:nth-child(9) {
+    height: 700px;
+    width: 100px;
+  }
+
+
+/* Animations for each planet */
+  .one{
+    animation: orbit1 10s linear infinite;
+  }
+  
+  .two {
+    animation: orbit2 15s linear infinite;
+  }
+  
+  .three {
+    animation: orbit3 20s linear infinite;
+  }
+  
+  .four{
+    animation: orbit4 25s linear infinite;
+  }
+
+  .five {
+    animation: orbit5 30s linear infinite;
+  }
+
+  .six {
+    animation: orbit6 35s linear infinite;
+  }
+  
+  .seven{
+    animation: orbit7 40s linear infinite;
+  }
+
+  .eight {
+    animation: orbit8 45s linear infinite;
+  }
+
+
+/* Hintergrundbild anzeigen beim Hover 
+.planet:hover::after {
+  content: normal;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/images/IMG_7415.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8; /* Transparenz des Hintergrundbilds */
+  z-index: 10000; 
+  
+}
+
+
+  /* Keyframes for planet orbits */
+  @keyframes orbit1 {
+    from {
+      transform: rotate(0deg) translateX(-300px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(-300px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes orbit2 {
+    from {
+      transform: rotate(0deg) translateX(-400px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(-400px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes orbit3 {
+    from {
+      transform: rotate(0deg) translateX(-500px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(-500px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes orbit4 {
+    from {
+      transform: rotate(0deg) translateX(-600px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(-600px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbit5 {
+    from {
+      transform: rotate(0deg) translateX(-700px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(-700px) rotate(-360deg);
+    }
+  }
+  @keyframes orbit6 {
+    from {
+      transform: rotate(0deg) translateX(-800px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(-800px) rotate(-360deg);
+    }
+  }
+  
+  @keyframes orbit7 {
+    from {
+      transform: rotate(0deg) translateX(-900px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(-900px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbit8 {
+    from {
+      transform: rotate(0deg) translateX(-1000px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(-1000px) rotate(-360deg);
+    }
+  }
+
+  /* Media Query */
+
+
+  @media screen and (max-width: 1000px) 
+    .solar-system {
+      height: 1000px;
+      width: 1000px;
+    }
+  
+    .sun {
+      height: 150px;
+      width: 150px;
+    }
+  
+    .planet {
+      height: 200px;
+      width: 200px;
+    }
+    .orbit:nth-child(2) {
+      height: 900px;
+      width: 500px;
+    }
+  
+    .orbit:nth-child(3) {
+      height: 200px;
+      width: 900px;
+    }
+  
+    .orbit:nth-child(4) {
+      height: 300px;
+      width: 300px;
+    }
+    .orbit:nth-child(5) {
+      height: 500px;
+      width: 500px;
+   }
+
+   .orbit:nth-child(6) {
+    height: 700px;
+    width: 700px;
+   }
+
+   .orbit:nth-child(7) {
+    height: 300px;
+    width: 300px;
+   }
+
+   .orbit:nth-child(8) {
+    height: 800px;
+    width: 800px;
+   }
+
+   .orbit:nth-child(9) {
+    height: 900px;
+    width: 900px;
+   }
+
+    /* Keyframes for planet orbits */
+    @keyframes orbit1 {
+      from {
+        transform: rotate(0deg) translateX(-200px) rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg) translateX(-200px) rotate(-360deg);
+      }
+    }
+  
+    @keyframes orbit2 {
+      from {
+        transform: rotate(0deg) translateX(-350px) rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg) translateX(-350px) rotate(-360deg);
+      }
+    }
+  
+    @keyframes orbit3 {
+      from {
+        transform: rotate(0deg) translateX(-400px) rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg) translateX(-400px) rotate(-360deg);
+      }
+    }
+  
+    @keyframes orbit4 {
+      from {
+        transform: rotate(0deg) translateX(-450px) rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg) translateX(-450px) rotate(-360deg);
+      }
+    }
+
+    @keyframes orbit5 {
+      from {
+        transform: rotate(0deg) translateX(-500px) rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg) translateX(-500px) rotate(-360deg);
+      }
+    }
+  
+     
+    @keyframes orbit6 {
+      from {
+        transform: rotate(0deg) translateX(-550px) rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg) translateX(-550px) rotate(-360deg);
+      }
+    }
+  
+    @keyframes orbit7 {
+      from {
+        transform: rotate(0deg) translateX(-450px) rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg) translateX(-450px) rotate(-360deg);
+      }
+    }
+
+    @keyframes orbit8 {
+      from {
+        transform: rotate(0deg) translateX(-800px) rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg) translateX(-800px) rotate(-360deg);
+      }
+    }
+  
+
+
+
+  /* ideen: jeder planet ein studiengang, vorschaubilder (rund), 
+  die zu weiteren kleineren solarsystemen führen -> planeten sind projekte
+  mokotex (mode, kostüm, textil), kode (zbm, editorial, foto, typo, type, interaction design),
+   illu, btm
