@@ -105,9 +105,62 @@
 }
 
 
+
+
+
+
+
+.label {
+  position: absolute;
+  font-family: "CompagnonItalic";
+    font-size: 20px;
+    font-weight: bold;
+  color: rgb(126, 243, 155);
+  
+  top: 50%;
+  left: 50%;
+  width: 200%; /* Der doppelte Umfang des Planeten, damit der Text einen vollständigen Kreis bildet */
+  height: 200%; /* Gleicher Wert wie die Breite */
+  transform: translate(-50%, -50%);
+  border-radius: 50%; /* Macht das Label kreisförmig */
+  overflow: hidden;
+  white-space: nowrap; /* Verhindert Zeilenumbrüche */
+  text-align: center;
+  animation: rotateText 10s linear infinite; /* Animation für den Textfluss */
+
+}
+
+.label span {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateY(-50%) translateX(0);
+  }
+  to {
+    transform: translateY(-50%) translateX(-100%);
+  }
+}
+
+@keyframes rotateText {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
   /* Planeten*/
   .planet {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     background-color: blue;
@@ -369,41 +422,41 @@ filter: none;
       width: 200px;
     }
     .orbit:nth-child(2) {
-      height: 900px;
-      width: 500px;
-    }
-  
-    .orbit:nth-child(3) {
-      height: 200px;
-      width: 900px;
-    }
-  
-    .orbit:nth-child(4) {
       height: 300px;
       width: 300px;
     }
-    .orbit:nth-child(5) {
+  
+    .orbit:nth-child(3) {
       height: 500px;
       width: 500px;
+    }
+  
+    .orbit:nth-child(4) {
+      height: 700px;
+      width: 700px;
+    }
+    .orbit:nth-child(5) {
+      height: 900px;
+      width: 900px;
    }
 
    .orbit:nth-child(6) {
-    height: 700px;
-    width: 700px;
+    height: 900px;
+    width: 100px;
    }
 
    .orbit:nth-child(7) {
     height: 300px;
-    width: 300px;
+    width: 700px;
    }
 
    .orbit:nth-child(8) {
     height: 800px;
-    width: 800px;
+    width: 600px;
    }
 
    .orbit:nth-child(9) {
-    height: 900px;
+    height: 100px;
     width: 900px;
    }
 
