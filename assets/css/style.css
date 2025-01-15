@@ -122,46 +122,46 @@
     border-radius: 50%;
     filter: invert(100%); /* Invertiere die Farben */
     transition: filter 0.3s ease; /* Sanfter Übergang */
-
+    mix-blend-mode: multiply;
   }
     
 
   .one {
     height: 400px; 
     width: 400px;
-    background-color: rgb(250, 4, 135);
+    background-color: rgba(0, 0, 0, 0);
 }
 
   .two {
     height: 400px;
     width: 400px;
-    background-color: rgb(166, 226, 77);
+    background-color: rgba(0, 0, 0, 0);
   }
   .three {
     height: 100px;
     width: 100px;
-    background-color: rgb(40, 169, 212);
+    background-color: rgba(40, 169, 212, 0);
   } 
   .four {
     height: 400px;
     width: 400px;
-    background-color: rgb(143, 130, 227);
+    background-color: rgba(143, 130, 227, 0);
     }
 
   .five {
     height: 400px;
     width: 400px;
-    background-color: rgb(242, 107, 188);
+    background-color: rgba(242, 107, 188, 0);
   }
   .six {
     height: 400px;
     width: 400px;
-    background-color: rgb(229, 69, 128);
+    background-color: rgba(229, 69, 128, 0);
  }
   .seven {
     height: 100px;
     width: 100px;
-    background-color: rgb(242, 107, 107);
+    background-color: rgba(242, 107, 107, 0);
   }
 
 
