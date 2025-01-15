@@ -123,6 +123,7 @@
     filter: invert(100%); /* Invertiere die Farben */
     transition: filter 0.3s ease; /* Sanfter Übergang */
     mix-blend-mode: multiply;
+    opacity: 90%;
   }
     
 
