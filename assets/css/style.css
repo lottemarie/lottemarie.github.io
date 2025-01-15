@@ -66,6 +66,10 @@
     align-items: center;
 }
   .sun-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: "CompagnonItalic";
     font-size: 20px;
     font-weight: bold;
@@ -84,78 +88,84 @@
     border-radius: 50%;
   }
   
+
+
+.moon-container {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  animation: rotate 8s linear infinite;
+}
+
+.moon {
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.moon-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: rotate 40s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+.moon-orbit.eins {
+  width: 100px;
+  height: 100px;
+  animation-duration: 30s;
+}
+
+.moon-orbit.zwei {
+  width: 120px;
+  height: 120px;
+  animation-duration: 20s;
+}
+
+.moon-orbit.drei {
+  width: 120px;
+  height: 120px;
+  animation-duration: 20s;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* Links initial ausblenden */
 .link {
-  display: none;
   position: absolute; /* Absolut positioniert relativ zum umgebenden Planeten */
   top: 50%; /* Position über dem Planeten */
   left: 50%;
   transform: translate(-50%, -150%); /* Zentriert über dem Planeten */
-  background-color: rgba(0, 0, 0, 0.8); /* Hintergrundfarbe */
-  color: white; /* Textfarbe */
+  color: rgb(0, 238, 60); /* Textfarbe */
   padding: 5px 10px; /* Innenabstand */
   border-radius: 5px; /* Abgerundete Ecken */
   text-decoration: none; /* Kein Unterstrich im Text */
   z-index: 100; /* Stellt sicher, dass der Link über anderen Elementen liegt */
 }
 
-/* Link sichtbar, wenn die Klasse "active" hinzugefügt wird */
+/* Link sichtbar, wenn die Klasse "active" hinzugefügt wird 
 .link.active {
   display: block;
 }
+*/
 
-
-
-
-
-
-
-.label {
-  position: absolute;
-  font-family: "CompagnonItalic";
-    font-size: 20px;
-    font-weight: bold;
-  color: rgb(126, 243, 155);
-  
-  top: 50%;
-  left: 50%;
-  width: 200%; /* Der doppelte Umfang des Planeten, damit der Text einen vollständigen Kreis bildet */
-  height: 200%; /* Gleicher Wert wie die Breite */
-  transform: translate(-50%, -50%);
-  border-radius: 50%; /* Macht das Label kreisförmig */
-  overflow: hidden;
-  white-space: nowrap; /* Verhindert Zeilenumbrüche */
-  text-align: center;
-  animation: rotateText 10s linear infinite; /* Animation für den Textfluss */
-
-}
-
-.label span {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  animation: scrollText 10s linear infinite;
-}
-
-@keyframes scrollText {
-  from {
-    transform: translateY(-50%) translateX(0);
-  }
-  to {
-    transform: translateY(-50%) translateX(-100%);
-  }
-}
-
-@keyframes rotateText {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
 
 
   /* Planeten*/
@@ -181,15 +191,13 @@
     border-radius: 50%;
     filter: invert(100%); /* Invertiere die Farben */
     transition: filter 0.3s ease; /* Sanfter Übergang */
-  
-}
-
-
+  }
+    
 
   .one {
     height: 400px; 
     width: 400px;
-    background-color: rgb(213, 146, 70);
+    background-color: rgb(250, 4, 135);
 }
 
   .two {
@@ -233,7 +241,7 @@
   animation-play-state: paused;
   transform: translate(-50%, -50%) scale(1.5);
   filter: none;
-  z-index: ;
+  z-index: 1;
 }
 
 .planet img:hover {
@@ -314,22 +322,6 @@ filter: none;
   }
 
 
-/* Hintergrundbild anzeigen beim Hover 
-.planet:hover::after {
-  content: normal;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(assets/images/IMG_7415.jpg);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.8; /* Transparenz des Hintergrundbilds */
-  z-index: 10000; 
-  
-}
-
 
   /* Keyframes for planet orbits */
   @keyframes orbit1 {
@@ -407,7 +399,8 @@ filter: none;
 
 
   @media screen and (max-width: 1000px) 
-    .solar-system {
+  
+   .solar-system {
       height: 1000px;
       width: 1000px;
     }
@@ -534,6 +527,16 @@ filter: none;
       }
     }
   
+
+
+
+
+
+
+
+
+
+
 
 
 
