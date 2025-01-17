@@ -1,0 +1,366 @@
+/* Base Styles */
+body {
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 10px;
+  font-family: "CompagnonLight";
+  font-weight: normal;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 100px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 30px white, 0 0 30px white, 0 0 30px white, 0 0 10px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255);
+}
+
+/* Solar System Container */
+.solar-system {
+  position: relative;
+  height: 1000px;
+  width: 1000px;
+  isolation: isolate;
+}
+
+/* Sun Styles */
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 150px;
+  width: 150px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "CompagnonItalic";
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(126, 243, 155);
+  text-align: center;
+}
+
+/* Orbit Styles */
+.orbit, .umlauf {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(113, 203, 121);
+  border-radius: 50%;
+}
+
+/* Planet Base Styles */
+.planet, .pluto {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform-origin: -150px;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: inset -20px -20px 30px rgba(0, 0, 0, 0.5), 
+              20px 20px 50px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  z-index: 10;
+  display: inline-block;
+  background-color: transparent;
+}
+
+/* Planet/Pluto Image Styles */
+.planet img, .pluto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: filter 0.3s ease;
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+}
+
+.planet img {
+  filter: invert(100%);
+}
+
+.pluto img {
+  filter: grayscale(100%);
+}
+
+/* Size Classes */
+.one, .two, .three, .four, .five, .six, .seven{
+  height: 200px;
+  width: 200px;
+}
+
+/* Hover Effects */
+.planet:hover, .pluto:hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  animation-play-state: paused;
+  z-index: 100;
+  box-shadow: none;
+}
+
+.planet img:hover, .pluto img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+/* Orbit Sizes */
+.orbit:nth-child(1) { height: 400px; width: 400px; }
+.orbit:nth-child(2) { height: 500px; width: 500px; }
+.orbit:nth-child(3) { height: 600px; width: 600px; }
+.orbit:nth-child(4) { height: 700px; width: 700px; }
+.orbit:nth-child(5) { height: 800px; width: 800px; }
+.orbit:nth-child(6) { height: 900px; width: 900px; }
+.orbit:nth-child(7) { height: 1000px; width: 1000px; }
+
+/* Animation Classes */
+.one { animation: orbit1 10s linear infinite; }
+.two { animation: orbit2 15s linear infinite; }
+.three { animation: orbit3 20s linear infinite; }
+.four { animation: orbit4 25s linear infinite; }
+.five { animation: orbit5 30s linear infinite; }
+.six { animation: orbit6 35s linear infinite; }
+.seven { animation: orbit7 40s linear infinite; }
+.eight { animation: orbit8 45s linear infinite; }
+
+/* Keyframes */
+@keyframes orbit1 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes orbit2 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes orbit3 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes orbit4 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes orbit5 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes orbit6 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes orbit7 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes orbit8 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+
+/* Umlauf Sizes */
+.umlauf:nth-child(1) { height: 400px; width: 400px; }
+.umlauf:nth-child(2) { height: 500px; width: 500px; }
+.umlauf:nth-child(3) { height: 600px; width: 600px; }
+.umlauf:nth-child(4) { height: 700px; width: 700px; }
+.umlauf:nth-child(5) { height: 800px; width: 800px; }
+.umlauf:nth-child(6) { height: 900px; width: 900px; }
+.umlauf:nth-child(7) { height: 1000px; width: 1000px; }
+
+/* Animation Classes umlauf */
+.one { animation: umlauf1 10s linear infinite; }
+.two { animation: umlauf2 15s linear infinite; }
+.three { animation: umlauf3 20s linear infinite; }
+.four { animation: umlauf4 25s linear infinite; }
+.five { animation: umlauf5 30s linear infinite; }
+.six { animation: umlauf6 35s linear infinite; }
+.seven { animation: umlauf7 40s linear infinite; }
+.eight { animation: umlauf8 45s linear infinite; }
+
+/* Keyframes Umlauf */
+@keyframes umlauf1 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes umlauf2 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes umlauf3 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes umlauf4 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes umlauf5 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes umlauf6 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes umlauf7 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+@keyframes umlauf8 {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+}
+
+
+/* Info Box Styles */
+.planet .info {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.planet:hover .info {
+  display: block;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+  .solar-system {
+    height: 800px;
+    width: 800px;
+  }
+  
+  .sun {
+    height: 80px;
+    width: 80px;
+  }
+  
+  /* Adjust other sizes accordingly */
+}
+/* Existing styles remain the same until gallery additions */
+
+/* Gallery Styles */
+.planet a, .pluto a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+.mfp-content {
+  max-width: 80% !important; /* Adjust percentage as needed */
+  margin: 0 auto;
+}
+
+.mfp-figure {
+  max-height: 80vh !important; /* Adjust viewport height as needed */
+}
+
+.mfp-figure img {
+  max-height: 70vh !important;
+  width: auto;
+}
+
+/* Add a custom class for the popup background */
+.custom-popup-class {
+  background: rgba(0, 0, 0, 0.8);
+}
+/* Modified hover effects for gallery */
+.planet:hover {
+    z-index: 100;
+    animation-play-state: paused;
+}
+
+.planet:hover img {
+    cursor: pointer;
+    filter: none;
+    opacity: 1;
+}
+
+.pluto:hover {
+    z-index: 100;
+    animation-play-state: paused;
+}
+
+.pluto:hover img {
+    cursor: pointer;
+    filter: none;
+    opacity: 1;
+}
+
+/* Gallery Navigation */
+.mfp-arrow {
+    opacity: 0.7;
+    color: white;
+}
+
+.mfp-arrow:hover {
+    opacity: 1;
+}
+
+.mfp-title {
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.mfp-counter {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Hide gallery container */
+.hidden-gallery {
+    display: none;
+}
+
+/* Rest of your existing CSS remains the same */
