@@ -65,7 +65,7 @@
 }
 
 .planet.overlap {
-  filter: invert();
+  filter: invert(0%);
   opacity: 0.7; /* Reduziert die Sichtbarkeit bei Überlappung */
 }
 
@@ -76,6 +76,7 @@
     transform: translate(-50%, -50%);
     border: 1px solid rgb(113, 203, 121);
     border-radius: 50%;
+    animation: rotate-and-flip 100s linear infinite;
   }
 
 .umlauf {
@@ -165,7 +166,7 @@
     filter: invert(100%); /* Invertiere die Farben */
     transition: filter 0.3s ease; /* Sanfter Übergang */
     mix-blend-mode: multiply;
-    opacity: 90%;
+    opacity: 1.0;
   }
     
   .pluto img {
@@ -176,7 +177,7 @@
     filter: grayscale(100%);
     transition: filter 0.3s ease; /* Sanfter Übergang */
     mix-blend-mode: multiply;
-    opacity: 90%;
+    opacity: 1.0;
   }
 
   .one {
@@ -235,7 +236,7 @@
 .pluto img:hover {
 filter: none;
 transform: scale(5); /* Vergrößert den Planeten auf 150% seiner Größe */
-opacity: 100%;
+opacity: 1.0;
 }
 
 .pluto:hover {
@@ -250,9 +251,16 @@ opacity: 100%;
 
 .planet img:hover {
 filter: none;
-transform: scale(5); /* Vergrößert den Planeten auf 150% seiner Größe */
+transform: scale(5); /* Vergrößert den Planeten */
 }
 
+.orbit:hover {
+animation-play-state: paused;
+}
+
+.umlauf:hover {
+  animation-play-state: paused;
+  }
   /* Different orbits for each planet */
   .orbit:nth-child(2) {
     height: 400px;
@@ -369,7 +377,7 @@ transform: scale(5); /* Vergrößert den Planeten auf 150% seiner Größe */
 
 /* Animations for each umlauf */
 .one{
-  animation: umlauf1 10s linear infinite;
+  animation: umlauf1 10s linear infinite spin;
 }
 
 .two {
@@ -661,6 +669,19 @@ transform: scale(5); /* Vergrößert den Planeten auf 150% seiner Größe */
     }
   
 
+
+/* Keyframes für Orbit-Rotation */
+@keyframes rotate-and-flip {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scaleX(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scaleX(-1); /* Horizontal spiegeln */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scaleX(1);
+  }
+}
 
 
 
