@@ -15,8 +15,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 </head>
 <body>
+
+	<div class="zoom-bar">
+		<button id="zoom-out">-</button>
+		<input type="range" id="zoom-slider" min="50" max="200" value="100" step="10">
+		<button id="zoom-in">+</button>
+		<div id="zoom-level">100%</div>
+
+	  </div>
+	  
   <div class="solar-system">
-    <div class="sun">
+	<div class="sun">
       <a href="index.html" class="link"></a>
       <div class="sun-text"></div>
     </div>
@@ -59,7 +68,8 @@
 
     
 
- <div class="solar-system">   
+ <div class="solar-system">  
+	<div class="sonne"> 
     <div class="umlauf">
       <div class="pluto one" id="pluto1">
         <img src="assets/images/IMG_7417.jpg" alt="Pluto One"/>
