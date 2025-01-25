@@ -692,46 +692,7 @@ animation-play-state: paused;
 }
 
 
-/* Zoom bar container */
-.zoom-bar {
-  position: fixed; /* Fixed position relative to the viewport */
-  top: 50%; /* Center vertically */
-  left: 10px; /* Offset from the left edge */
-  transform: translateY(-50%); /* Adjust for centering */
-  width: 60px; /* Fixed width */
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  padding: 15px; /* Padding inside the zoom bar */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  z-index: 1000; /* Ensure it stays on top */
-}
 
-/* Buttons */
-.zoom-bar button {
-  background: #fff; /* White background */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  width: 40px; /* Fixed width */
-  height: 40px; /* Fixed height */
-  font-size: 20px; /* Font size for "+" and "-" */
-  margin: 10px 0; /* Space between buttons */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background 0.3s ease; /* Smooth hover transition */
-}
-
-.zoom-bar button:hover {
-  background: #ccc; /* Slightly darker background on hover */
-}
-
-/* Slider */
-.zoom-bar input[type="range"] {
-  transform: rotate(-90deg); /* Rotate slider for vertical layout */
-  margin: 15px 0; /* Space above and below */
-  width: 150px; /* Length of the slider */
-  height: 6px; /* Thickness of the slider */
-  background: #fff; /* Slider background */
-  cursor: pointer; /* Pointer cursor on hover */
-}
 
 /* Your existing styles here */
 
