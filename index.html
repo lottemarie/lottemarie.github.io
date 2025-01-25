@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,117 +7,110 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/fonts.css">
 
-  <!-- Slick CSS -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-
-  <!-- Magnific Popup CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-</head>
 <body>
 	<div id="zoom-wrapper">
-	 <div class="zoom-bar">
-		<button id="zoom-out">-</button>
-		<input type="range" id="zoom-slider" min="50" max="200" value="100" step="10">
-		<button id="zoom-in">+</button>
-		<div id="zoom-level">100%</div>
-	</div>  
-
-	
-  <div class="solar-system">
-	<div class="sun">
+	 <div class="solar-system">
+	  <div class="sun">
       <a href="index.html" class="link"></a>
       <div class="sun-text"></div>
     </div>
-   
+       <!-- Unfertige Projekte -->
+       <div class="orbit">
+        <div class="planet one" id="planet1">
+          <img src="assets/images/IMG_7417.jpg" alt="Planet One"/>
+          <div class="info">Projektname: <br> - Von: Name, Studiengang <br> Semester </div>
+        </div>
+      </div>
+      <div class="orbit">
+        <div class="planet two" data-popup="popup-two" id="planet2">
+          <img src="assets/images/IMG_7409.jpg" alt="Planet Two"/>
+        </div>
+      </div>
+      <div class="orbit">
+        <div class="planet three" data-popup="popup-three" id="planet3">
+          <img src="assets/images/IMG_7425.jpg" alt="Planet Three"/>
+        </div>
+      </div>
+      <div class="orbit">
+        <div class="planet four" data-popup="popup-four" id="planet4">
+          <img src="assets/images/IMG_7416.jpg" alt="Planet Four"/>
+        </div>
+      </div>
+      <div class="orbit">
+        <div class="planet five" data-popup="popup-five" id="planet5">
+          <img src="assets/images/IMG_7300.jpg" alt="Planet Five"/>
+        </div>
+      </div>
+      <div class="orbit">
+        <div class="planet six" data-popup="popup-six" id="planet6">
+          <img src="assets/images/IMG_7330.jpg" alt="Planet Six"/>
+        </div>
+      </div>
+      <div class="orbit">
+        <div class="planet seven" data-popup="popup-seven" id="planet7">
+          <img src="assets/images/IMG_7410.jpg" alt="Planet Seven"/>
+  
+  
+      
+  <div class="solar-system">
+  <div class="sonne">
+      <div class="umlauf">
+        <div class="pluto one" data-popup="popup-one" id="pluto1">
+          <img src="assets/images/IMG_7417.jpg" alt="Pluto One"/>
+          <div class="info">Projektname: <br> - Von: Name, Studiengang <br> Semester </div>
+        </div>
+      </div>
+      <div class="umlauf">
+        <div class="pluto two" data-popup="popup-two" id="pluto2">
+          <img src="assets/images/IMG_7409.jpg" alt="Pluto Two"/>
+        </div>
+      </div>
+      <div class="umlauf">
+        <div class="pluto three" data-popup="popup-three" id="pluto3">
+          <img src="assets/images/IMG_7425.jpg" alt="Pluto Three"/>
+        </div>
+      </div>
+      <div class="umlauf">
+        <div class="pluto four" data-popup="popup-four" id="pluto4">
+          <img src="assets/images/IMG_7416.jpg" alt="Pluto Four"/>
+        </div>
+      </div>
+      <div class="umlauf">
+        <div class="pluto five" data-popup="popup-five" id="pluto5">
+          <img src="assets/images/IMG_7300.jpg" alt="Pluto Five"/>
+        </div>
+      </div>
+      <div class="umlauf">
+        <div class="pluto six" data-popup="popup-six" id="pluto6">
+          <img src="assets/images/IMG_7330.jpg" alt="Pluto Six"/>
+        </div>
+      </div>
+      <div class="umlauf">
+        <div class="pluto seven" data-popup="popup-seven" id="pluto7">
+          <img src="assets/images/IMG_7410.jpg" alt="Pluto Seven"/>
+        </div>
+      </div>
+    </div>
+  
 
-    <!-- Unfertige Projekte -->
-    <div class="orbit">
-      <div class="planet one" id="planet1">
-        <img src="assets/images/IMG_7417.jpg" alt="Planet One"/>
-        <div class="info">Projektname: <br> - Von: Name, Studiengang <br> Semester </div>
-      </div>
-    </div>
-    <div class="orbit">
-      <div class="planet two" data-popup="popup-two" id="planet2">
-        <img src="assets/images/IMG_7409.jpg" alt="Planet Two"/>
-      </div>
-    </div>
-    <div class="orbit">
-      <div class="planet three" data-popup="popup-three" id="planet3">
-        <img src="assets/images/IMG_7425.jpg" alt="Planet Three"/>
-      </div>
-    </div>
-    <div class="orbit">
-      <div class="planet four" data-popup="popup-four" id="planet4">
-        <img src="assets/images/IMG_7416.jpg" alt="Planet Four"/>
-      </div>
-    </div>
-    <div class="orbit">
-      <div class="planet five" data-popup="popup-five" id="planet5">
-        <img src="assets/images/IMG_7300.jpg" alt="Planet Five"/>
-      </div>
-    </div>
-    <div class="orbit">
-      <div class="planet six" data-popup="popup-six" id="planet6">
-        <img src="assets/images/IMG_7330.jpg" alt="Planet Six"/>
-      </div>
-    </div>
-    <div class="orbit">
-      <div class="planet seven" data-popup="popup-seven" id="planet7">
-        <img src="assets/images/IMG_7410.jpg" alt="Planet Seven"/>
-
-
-	  
-<div class="solar-system">
-<div class="sonne">
-    <div class="umlauf">
-      <div class="pluto one" data-popup="popup-one" id="pluto1">
-        <img src="assets/images/IMG_7417.jpg" alt="Pluto One"/>
-        <div class="info">Projektname: <br> - Von: Name, Studiengang <br> Semester </div>
-      </div>
-    </div>
-    <div class="umlauf">
-      <div class="pluto two" data-popup="popup-two" id="pluto2">
-        <img src="assets/images/IMG_7409.jpg" alt="Pluto Two"/>
-      </div>
-    </div>
-    <div class="umlauf">
-      <div class="pluto three" data-popup="popup-three" id="pluto3">
-        <img src="assets/images/IMG_7425.jpg" alt="Pluto Three"/>
-      </div>
-    </div>
-    <div class="umlauf">
-      <div class="pluto four" data-popup="popup-four" id="pluto4">
-        <img src="assets/images/IMG_7416.jpg" alt="Pluto Four"/>
-      </div>
-    </div>
-    <div class="umlauf">
-      <div class="pluto five" data-popup="popup-five" id="pluto5">
-        <img src="assets/images/IMG_7300.jpg" alt="Pluto Five"/>
-      </div>
-    </div>
-    <div class="umlauf">
-      <div class="pluto six" data-popup="popup-six" id="pluto6">
-        <img src="assets/images/IMG_7330.jpg" alt="Pluto Six"/>
-      </div>
-    </div>
-    <div class="umlauf">
-      <div class="pluto seven" data-popup="popup-seven" id="pluto7">
-        <img src="assets/images/IMG_7410.jpg" alt="Pluto Seven"/>
-      </div>
-    </div>
-  </div>
 
   
-<!-- Popup für vergrößerte Darstellung -->
-<div id="shared-popup" class="popup">
-    <div class="popup-content">
-        <img id="popup-image" src="assets/images/IMG_7410.jpg" alt="Vergrößerte Ansicht">
-        <button class="close-popup">✕</button>
-    </div>
-</div>
+    <div id="zoom-controls">
+      <button id="zoom-out">-</button>
+      <input type="range" id="zoom-slider" min="50" max="150" value="100" step="10">
+      <button id="zoom-in">+</button>
+      <span id="zoom-level">100%</span>
+  </div>
 
-  <script src="assets/js/script.js"></script>
+  <div id="planet-popup" class="planet-popup">
+      <div class="popup-content">
+          <span class="close-popup">&times;</span>
+          <h2 id="popup-title"></h2>
+          <div class="popup-gallery"></div>
+          <p id="popup-text"></p>
+      </div>
+  </div>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
