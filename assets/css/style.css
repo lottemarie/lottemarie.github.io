@@ -629,10 +629,10 @@ animation-play-state: paused;
 .popup-content {
   background-color: #37fc00;
   border-radius: 50%;
-  width: 80vmin;
-  height: 80vmin;
-  max-width: 600px;
-  max-height: 600px;
+  width: 90vmin;
+  height: 90vmin;
+  max-width: 1000px;
+  max-height: 1000px;
   padding: 20px;
   position: relative;
   overflow: hidden;
