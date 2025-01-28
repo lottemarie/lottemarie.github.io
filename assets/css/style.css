@@ -654,25 +654,47 @@ animation-play-state: paused;
 }
 
 .popup-gallery {
-  flex: 1;
-  overflow-y: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
-  z-index: 1001;
+  justify-content: space-between;
+  width: 80%;
+  position: relative;
 }
 
 .popup-gallery img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 #popup-text {
   margin-top: 20px;
   text-align: center;
   color: #333;
+}
+
+.gallery-button {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.gallery-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+.prev {
+  position: absolute;
+  left: -50px;
+}
+
+.next {
+  position: absolute;
+  right: -50px;
 }
