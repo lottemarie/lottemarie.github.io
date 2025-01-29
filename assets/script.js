@@ -1,54 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+  // Define image galleries for each planet
   const galleryImages = {
-    planet1: [
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-    ],
-    planet2: [
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-    ],
-    planet3: [
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-    ],
-    planet4: [
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-    ],
-    five: [
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-    ],
-    six: [
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-    ],
-    seven: [
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-      "assets/images/IMG_7365.jpg",
-    ],
-    eight: [
-      "assets/images/neptune1.jpg",
-      "assets/images/neptune2.jpg",
-      "assets/images/neptune3.jpg",
-    ],
-    nine: [
-      "assets/images/pluto1.jpg",
-      "assets/images/pluto2.jpg",
-      "assets/images/pluto3.jpg",
-    ],
+    planet1: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
+    planet2: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
+    planet3: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
+    planet4: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
+    planet5: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
+    planet6: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
+    planet7: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
+    planet8: ["assets/images/neptune1.jpg", "assets/images/neptune2.jpg", "assets/images/neptune3.jpg"],
+    planet9: ["assets/images/pluto1.jpg", "assets/images/pluto2.jpg", "assets/images/pluto3.jpg"],
   };
 
-  
   // Popup Elements
   const popup = document.getElementById("popup");
   const popupContent = document.querySelector(".popup-content");
@@ -60,74 +23,76 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextButton = document.createElement("button");
   const closeButton = document.createElement("button");
 
-  // Gallery Setup
+  // Setup the gallery structure
   popupGallery.classList.add("popup-gallery");
   prevButton.textContent = "<";
   nextButton.textContent = ">";
   prevButton.classList.add("gallery-button", "prev");
   nextButton.classList.add("gallery-button", "next");
+  closeButton.textContent = "X";
+  closeButton.classList.add("close-popup");
 
+  // Append elements to the popup
   popupGallery.appendChild(prevButton);
   popupGallery.appendChild(galleryImage);
   popupGallery.appendChild(nextButton);
+  popupContent.appendChild(closeButton);
   popupContent.appendChild(popupGallery);
 
   let currentIndex = 0;
   let images = [];
 
-  // Hide Popup
+  // Hide popup
   const hidePopup = () => {
-    popup.style.display = "none";
+    popup.classList.remove("visible");
   };
 
-   // Add click listeners to planets
-   document.querySelectorAll('.planet').forEach((planet) => {
-    planet.addEventListener('click', () => {
-      const planetId = planet.dataset.popup; // Identify pluto's specific popup
+  // Add event listeners to planets
+  document.querySelectorAll(".planet").forEach((planet) => {
+    planet.addEventListener("click", () => {
+      const planetId = planet.dataset.popup; // Get planet's specific ID
 
-   // Add click listeners to plutos
-   document.querySelectorAll('.pluto').forEach((pluto) => {
-    pluto.addEventListener('click', () => {
-      const plutoId = pluto.dataset.popup; // Identify pluto's specific popup
+      // Ensure there are images for the selected planet
+      if (!galleryImages[planetId]) {
+        alert(`No images found for ${planetId}`);
+        return;
+      }
 
-      // Customize content dynamically for each planet
+      // Set images for the selected planet
+      images = galleryImages[planetId];
+      currentIndex = 0;
+
+      // Update popup content
       popupTitle.textContent = `Gallery for ${planetId}`;
       popupText.textContent = `Details about ${planetId}.`;
-
-      // Customize content dynamically for each pluto
-      popupTitle.textContent = `Gallery for ${plutoId}`;
-      popupText.textContent = `Details about ${plutoId}.`;
-
-      // Reset to first image
-      currentIndex = 0;
       galleryImage.src = images[currentIndex];
 
       // Show popup
-      popup.classList.add('visible');
+      popup.classList.add("visible");
     });
   });
 
-  // Carousel functionality
+  // Show selected image
   const showImage = (index) => {
     if (index < 0) {
-      currentIndex = images.length - 1; // Wrap around to last image
+      currentIndex = images.length - 1; // Loop to last image
     } else if (index >= images.length) {
-      currentIndex = 0; // Wrap around to first image
+      currentIndex = 0; // Loop back to first image
     } else {
       currentIndex = index;
     }
     galleryImage.src = images[currentIndex];
   };
 
-  // Button event listeners
-  prevButton.addEventListener('click', () => showImage(currentIndex - 1));
-  nextButton.addEventListener('click', () => showImage(currentIndex + 1));
+  // Button event listeners for image navigation
+  prevButton.addEventListener("click", () => showImage(currentIndex - 1));
+  nextButton.addEventListener("click", () => showImage(currentIndex + 1));
 
   // Close popup on clicking close button or outside popup content
-  closeButton.addEventListener('click', () => popup.classList.remove('visible'));
-  popup.addEventListener('click', (e) => {
+  closeButton.addEventListener("click", hidePopup);
+  popup.addEventListener("click", (e) => {
     if (!popupContent.contains(e.target)) {
-      popup.classList.remove('visible');
+      hidePopup();
     }
   });
 });
