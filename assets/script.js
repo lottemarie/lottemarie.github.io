@@ -2,14 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Define image galleries for each planet
   const galleryImages = {
     planet1: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7366.jpg", "assets/images/IMG_7367.jpg"],
-    planet2: ["assets/images/IMG_7368.jpg", "assets/images/IMG_7369.jpg", "assets/images/IMG_7370.jpg"],
-    planet3: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
-    planet4: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
-    planet5: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
-    planet6: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
-    planet7: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
-    planet8: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg", "assets/images/IMG_7365.jpg"],
-    planet9: ["assets/images/pluto1.jpg", "assets/images/pluto2.jpg", "assets/images/pluto3.jpg"],
+    planet2: ["assets/images/IMG_7368.jpg", "assets/images/IMG_7369.PNG", "assets/images/IMG_7370.PNG"],
+    planet3: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7366.jpg", "assets/images/IMG_7367.jpg"],
+    planet4: ["assets/images/IMG_7368.jpg", "assets/images/IMG_7369.PNG", "assets/images/IMG_7370.PNG"],
+    planet5: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7366.jpg", "assets/images/IMG_7367.jpg"],
+    planet6: ["assets/images/IMG_7368.jpg", "assets/images/IMG_7369.PNG", "assets/images/IMG_7370.PNG"],
+    planet7: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7366.jpg", "assets/images/IMG_7367.jpg"],
+    planet8: ["assets/images/IMG_7368.jpg", "assets/images/IMG_7369.PNG", "assets/images/IMG_7370.PNG"],
+    planet9: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7366.jpg", "assets/images/IMG_7367.jpg"],
+    planet10: ["assets/images/IMG_7368.jpg", "assets/images/IMG_7369.PNG", "assets/images/IMG_7370.PNG"],
   };
 
   // Popup Elements
