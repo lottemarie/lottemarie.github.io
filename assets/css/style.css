@@ -670,7 +670,7 @@ animation-play-state: paused;
 .popup-gallery img {
   max-width: 100%;
   max-height: 60vh;
-  object-fit: contain;
+  object-fit: fill;
   border-radius: 10px;
 }
 
