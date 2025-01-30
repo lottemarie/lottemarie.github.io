@@ -11,8 +11,19 @@
     margin: 0;
     padding: 0;
     transition: transform 0.3s ease;
+    font-family: 'Utara', sans-serif; 
     
    }
+   
+@font-face {
+    font-family: 'Utara';
+    src: url('assets/fonts/Utara-Light.woff2') format('woff2'), /* Preferred format */
+         url('assets/fonts/Utara-Regular.woff2') format('woff2'),   /* Backup format */
+         url('assets/fonts/Utara-Medium.woff2') format('woff2'); /* Backup */
+    font-weight: normal;
+    font-style: normal;
+}
+
 
   h1 {
 		position: absolute;
@@ -21,7 +32,7 @@
 		transform: translateX(-50%);
 		margin: 0;
 		padding: 10px;
-		font-family: "Utara-Bold"; 
+		font-family: "Utara"; 
 		font-weight: normal;
 		text-align: center;
 		text-transform: lowercase;
