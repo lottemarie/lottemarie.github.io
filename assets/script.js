@@ -26,6 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Setup the gallery structure
   popupGallery.classList.add("popup-gallery");
+  galleryImage.classList.add("popup-image"); 
+  popupTitle.classList.add("popup-title");
+  popupText.classList.add("popup-text"); 
   prevButton.textContent = "<";
   nextButton.textContent = ">";
   prevButton.classList.add("gallery-button", "prev");

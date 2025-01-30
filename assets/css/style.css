@@ -21,7 +21,7 @@
 		transform: translateX(-50%);
 		margin: 0;
 		padding: 10px;
-		font-family: "CompagnonLight"; 
+		font-family: "Utara-Bold"; 
 		font-weight: normal;
 		text-align: center;
 		text-transform: lowercase;
@@ -91,6 +91,8 @@
     border: 1.25px solid rgb(219, 173, 214);
     border-radius: 50%;
     animation: rotate-and-flip 100s linear infinite;
+    background-color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
   }
 
 .umlauf {
@@ -615,6 +617,7 @@ animation-play-state: paused;
 
 
 
+/* Ensure the popup fills the viewport */
 .popup {
   display: none;
   position: fixed;
@@ -622,29 +625,30 @@ animation-play-state: paused;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  z-index: 1000;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .popup.visible {
   display: flex;
 }
 
+/* Style the popup content */
 .popup-content {
-  background-color: #37fc00;
+  background-color: black;
   border-radius: 50%;
-  width: 90vmin;
-  height: 90vmin;
-  max-width: 1000px;
-  max-height: 1000px;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
+  width: 80vmin;
+  height: 80vmin;
+  max-width: 600px;
+  max-height: 600px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .close-popup {
@@ -687,7 +691,7 @@ animation-play-state: paused;
   border: none;
   padding: 10px 15px;
   font-size: 1.5rem;
-  cursor: ;
+  cursor: pointer;
   border-radius: 50%;
   z-index: 10;
 }
@@ -712,4 +716,21 @@ animation-play-state: paused;
   background: white;
   border-radius: 50%;
   padding: 5px 10px;
+}
+
+/* Style the popup title */
+.popup-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Style the popup description text */
+.popup-text {
+  font-size: 1.2rem;
+  text-align: center;
+  color: lightgray;
+  padding: 0 20px;
 }
