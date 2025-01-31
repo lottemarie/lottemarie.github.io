@@ -746,3 +746,28 @@ animation-play-state: paused;
   color: lightgray;
   padding: 0 20px;
 }
+
+/* Container für das Sonnensystem */
+#zoom-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styling für den Slider */
+.zoom-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+#zoom-slider {
+  width: 200px;
+}

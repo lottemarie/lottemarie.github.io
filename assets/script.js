@@ -168,3 +168,21 @@ Randomiser.prototype.run = function() {
 // Kick it off
 var lineOne = new Randomiser(document.getElementById('line_01'));
 lineOne.run();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const zoomSlider = document.getElementById("zoom-slider");
+  const zoomWrapper = document.getElementById("zoom-wrapper");
+
+  function setZoom(level) {
+      zoomWrapper.style.transform = `scale(${level / 100})`;
+  }
+
+  zoomSlider.addEventListener("input", () => {
+      const zoomLevel = parseInt(zoomSlider.value, 10);
+      setZoom(zoomLevel);
+  });
+
+  // Standard-Zoom setzen (100%)
+  setZoom(300);
+});
