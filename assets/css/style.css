@@ -647,7 +647,7 @@ animation-play-state: paused;
 
 /* Style the popup content */
 .popup-content {
-  background-color: black;
+  background-color: rgb(175, 43, 43);
   border-radius: 50%;
   width: 100vmin;
   height: 100vmin;
@@ -663,7 +663,7 @@ animation-play-state: paused;
 }
 
 .close-popup {
-  position: rlative;
+  position: relative;
   top: 10px;
   right: 20px;
   font-size: 28px;
@@ -681,6 +681,7 @@ animation-play-state: paused;
   justify-content: center;
   align-items: center;
   position: relative;
+  align-self: center;
 }
 
 .popup-gallery img {
