@@ -5,3 +5,10 @@
   font-weight:200;
   font-style:normal;
 }
+
+@font-face {
+  font-family: 'Utara';
+  src: url('../fonts/Utara-Regular.woff2') format('woff2');   /* Backup format */     
+  font-weight: normal;
+  font-style: normal;
+}

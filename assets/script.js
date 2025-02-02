@@ -169,7 +169,7 @@ Randomiser.prototype.run = function() {
 var lineOne = new Randomiser(document.getElementById('line_01'));
 lineOne.run();
 
-
+//Zoom
 document.addEventListener("DOMContentLoaded", () => {
   const zoomSlider = document.getElementById("zoom-slider");
   const zoomWrapper = document.getElementById("zoom-wrapper");
@@ -178,11 +178,34 @@ document.addEventListener("DOMContentLoaded", () => {
       zoomWrapper.style.transform = `scale(${level / 100})`;
   }
 
+  // Slider-Steuerung
   zoomSlider.addEventListener("input", () => {
       const zoomLevel = parseInt(zoomSlider.value, 10);
       setZoom(zoomLevel);
   });
 
   // Standard-Zoom setzen (100%)
-  setZoom(300);
+  setZoom(100);
+
+  let zoomSensitivity = 5; // Höhere Sensitivität für Touchpads
+
+  zoomWrapper.addEventListener("wheel", (event) => {
+      event.preventDefault();
+      
+      let zoomLevel = parseInt(zoomSlider.value, 10);
+      let scrollAmount = event.deltaY;
+
+      // Touchpad-Scrolling ist feiner → Sensitivität anpassen
+      if (Math.abs(scrollAmount) < 50) {
+          scrollAmount *= zoomSensitivity;
+      }
+
+      // Einheitliche Berechnung für Touchpad & Maus
+      zoomLevel += scrollAmount > 0 ? -5 : 5;
+      zoomLevel = Math.min(200, Math.max(50, zoomLevel)); // Begrenzung
+
+      // Werte aktualisieren
+      zoomSlider.value = zoomLevel;
+      setZoom(zoomLevel);
+  });
 });

@@ -15,14 +15,7 @@
     
    }
   
-@font-face {
-    font-family: 'Utara';
-    src: url('assets/fonts/Utara-Light.woff2') format('woff2'), /* Preferred format */
-         url('assets/fonts/Utara-Regular.woff2') format('woff2'),   /* Backup format */
-         url('assets/fonts/Utara-Medium.woff2') format('woff2'); /* Backup */
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 
   .text {
@@ -324,31 +317,31 @@ animation-play-state: paused;
 }
 
 .two {
-  animation: umlauf2 15s linear infinite;
+  animation: umlauf2 15s linear infinite spin;
 }
 
 .three {
-  animation: umlauf3 20s linear infinite;
+  animation: umlauf3 20s linear infinite spin;
 }
 
 .four{
-  animation: umlauf4 25s linear infinite;
+  animation: umlauf4 25s linear infinite spin;
 }
 
 .five {
-  animation: umlauf5 30s linear infinite;
+  animation: umlauf5 30s linear infinite spin;
 }
 
 .six {
-  animation: umlauf6 35s linear infinite;
+  animation: umlauf6 35s linear infinite spin;
 }
 
 .seven{
-  animation: umlauf7 40s linear infinite;
+  animation: umlauf7 40s linear infinite spin;
 }
 
 .eight {
-  animation: umlauf8 45s linear infinite;
+  animation: umlauf8 45s linear infinite spin;
 }
 
 
@@ -537,7 +530,7 @@ animation-play-state: paused;
     width: 900px;
    }
 
-    /* Keyframes for pluto umlauf */
+    /* Keyframes for pluto umlauf 
     @keyframes umlauf1 {
       from {
         transform: rotate(0deg) translateX(-200px) rotate(0deg);
@@ -638,7 +631,7 @@ animation-play-state: paused;
   height: 100%;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .popup.visible {
@@ -675,6 +668,7 @@ animation-play-state: paused;
 }
 
 .popup-gallery {
+  
   width: 100%;
   height: 100%;
   display: flex;
@@ -698,7 +692,7 @@ animation-play-state: paused;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0);
   color: white;
   border: none;
   padding: 10px 15px;
@@ -737,6 +731,7 @@ animation-play-state: paused;
   text-align: center;
   color: white;
   margin-bottom: 10px;
+  display: none;
 }
 
 /* Style the popup description text */
@@ -745,6 +740,7 @@ animation-play-state: paused;
   text-align: center;
   color: lightgray;
   padding: 0 20px;
+  display: none;
 }
 
 /* Container für das Sonnensystem */
@@ -762,7 +758,7 @@ animation-play-state: paused;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0);
   padding: 10px;
   border-radius: 10px;
   z-index: 1000;
@@ -770,4 +766,15 @@ animation-play-state: paused;
 
 #zoom-slider {
   width: 200px;
+opacity: 50%;
+}
+
+.label {
+  font-family: "Utara", monospace; 
+  font-weight: normal;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255);
 }
