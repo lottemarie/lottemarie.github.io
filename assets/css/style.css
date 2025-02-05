@@ -12,29 +12,12 @@
     padding: 0;
     transition: transform 0.3s ease;
     font-family: 'Utara', sans-serif; 
-    
+ 
    }
   
-
-
-
-  .text {
-		position: absolute;
-		top: 10px;
-		left: 80px;
-		transform: translateX(-50%);
-		margin: 10px;
-		padding: 10px;
-		font-family: "Utara", monospace; 
-		font-weight: normal;
-		text-align: center;
-		text-transform: lowercase;
-		font-size: 30px;
-		color: rgb(255, 255, 255);
-		text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255);
-	}
 	
-  
+
+
 /* Allgemeine Eigenschaften */
   .solar-system {
     position: relative;
@@ -43,11 +26,7 @@
     isolation: isolate; /* Wichtig für mix-blend-mode */
   }
   
-  .background-image {
-    height: max-content;
-    width: max-content;
-    display: flex;
-  }
+
   .sun {
     position: absolute;
     top: 50%;
@@ -94,23 +73,13 @@
     transform: translate(-50%, -50%);
     border: 1.25px solid rgb(219, 173, 214);
     border-radius: 50%;
-    animation: rotate-and-flip 100s linear infinite;
     background-color: rgb(255, 255, 255);
     mix-blend-mode: difference;
   }
 
-.umlauf {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1.25px solid rgb(139, 79, 132);
-    border-radius: 50%;
-  }
-
 
   /* Planeten*/
-  .planet .pluto {
+  .planet {
     position: relative;
     top: 50%;
     left: 50%;
@@ -138,17 +107,6 @@
     opacity: 1.0;
   }
     
-  .pluto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease; /* Sanfter Übergang */
-    mix-blend-mode: multiply;
-    opacity: 1.0;
-  }
-
 
 
 
@@ -165,25 +123,10 @@
   box-shadow: none;
 }
 
-.pluto img:hover {
-filter: none;
-transform: scale(5); /* Vergrößert den Planeten auf 150% seiner Größe */
-opacity: 1.0;
-}
-
-.pluto:hover {
-  transform: translate(-50%, -50%) scale(5);
-  animation-play-state: paused;
-  transform: translate(-50%, -50%) scale(1.5);
-  filter: none;
-  z-index: 100;
-  transform: scale(5); /* Vergrößert den Planeten auf 150% seiner Größe */
-  box-shadow: none;
-}
-
 .planet img:hover {
 filter: none;
 transform: scale(5); /* Vergrößert den Planeten */
+animation-play-state: paused;
 }
 
 
@@ -191,55 +134,60 @@ transform: scale(5); /* Vergrößert den Planeten */
 animation-play-state: paused;
 }
 
-.umlauf:hover {
-  animation-play-state: paused;
-  }
-
-  */
 
   /* Different orbits for each planet */
   .orbit:nth-child(2) {
     height: 400px;
     width: 400px;
+    animation: rotate-and-flip 100s linear infinite;
   }
   
   .orbit:nth-child(3) {
     height: 800px;
     width: 800px;
+    animation: rotate-and-flip 70s linear infinite;
   }
   
   .orbit:nth-child(4) {
     height: 900px;
     width: 100px;
+    animation: rotate-and-flip 50s linear infinite;
   }
   
   .orbit:nth-child(5) {
     height: 100px;
     width: 1100px;
+    animation: rotate-and-flip 60s linear infinite;
   }
  
   .orbit:nth-child(6) {
     height: 500px;
     width: 900px;
+    animation: rotate-and-flip 100s linear infinite;
   }
   .orbit:nth-child(7) {
     height: 1100px;
     width: 1000px;
+    animation: rotate-and-flip 50s linear infinite;
   }
  
   .orbit:nth-child(8) {
     height: 890px;
     width: 890px;
+    animation: rotate-and-flip 70s linear infinite;
   }
   .orbit:nth-child(9) {
     height: 700px;
     width: 100px;
+    animation: rotate-and-flip 10s linear infinite;
+   
   }
 
 
 /* Animations for each planet */
   .one{
     animation: orbit1 20s linear infinite;
+    
   }
   
   .two {
@@ -271,78 +219,7 @@ animation-play-state: paused;
   }
 
 
- /* Different umläufe for each pluto */
- .umlauf:nth-child(2) {
-  height: 400px;
-  width: 400px;
-}
 
-.umlauf:nth-child(3) {
-  height: 800px;
-  width: 800px;
-}
-
-.umlauf:nth-child(4) {
-  height: 900px;
-  width: 100px;
-}
-
-.umlauf:nth-child(5) {
-  height: 100px;
-  width: 1100px;
-}
-
-.umlauf:nth-child(6) {
-  height: 500px;
-  width: 900px;
-}
-.umlauf:nth-child(7) {
-  height: 1100px;
-  width: 100px;
-}
-
-.umlauf:nth-child(8) {
-  height: 890px;
-  width: 890px;
-}
-.umlauf:nth-child(9) {
-  height: 700px;
-  width: 100px;
-}
-
-
-/* Animations for each umlauf */
-.one{
-  animation: umlauf1 10s linear infinite spin;
-}
-
-.two {
-  animation: umlauf2 15s linear infinite spin;
-}
-
-.three {
-  animation: umlauf3 20s linear infinite spin;
-}
-
-.four{
-  animation: umlauf4 25s linear infinite spin;
-}
-
-.five {
-  animation: umlauf5 30s linear infinite spin;
-}
-
-.six {
-  animation: umlauf6 35s linear infinite spin;
-}
-
-.seven{
-  animation: umlauf7 40s linear infinite spin;
-}
-
-.eight {
-  animation: umlauf8 45s linear infinite spin;
-}
 
 
 
@@ -530,79 +407,6 @@ animation-play-state: paused;
     width: 900px;
    }
 
-    /* Keyframes for pluto umlauf 
-    @keyframes umlauf1 {
-      from {
-        transform: rotate(0deg) translateX(-200px) rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg) translateX(-200px) rotate(-360deg);
-      }
-    }
-  
-    @keyframes umlauf2 {
-      from {
-        transform: rotate(0deg) translateX(-350px) rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg) translateX(-350px) rotate(-360deg);
-      }
-    }
-  
-    @keyframes umlauf3 {
-      from {
-        transform: rotate(0deg) translateX(-400px) rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg) translateX(-400px) rotate(-360deg);
-      }
-    }
-  
-    @keyframes umlauf4 {
-      from {
-        transform: rotate(0deg) translateX(-450px) rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg) translateX(-450px) rotate(-360deg);
-      }
-    }
-
-    @keyframes umlauf5 {
-      from {
-        transform: rotate(0deg) translateX(-500px) rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg) translateX(-500px) rotate(-360deg);
-      }
-    }
-  
-     
-    @keyframes umlauf6 {
-      from {
-        transform: rotate(0deg) translateX(-550px) rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg) translateX(-550px) rotate(-360deg);
-      }
-    }
-  
-    @keyframes umlauf7 {
-      from {
-        transform: rotate(0deg) translateX(-450px) rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg) translateX(-450px) rotate(-360deg);
-      }
-    }
-
-    @keyframes umlauf8 {
-      from {
-        transform: rotate(0deg) translateX(-800px) rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg) translateX(-800px) rotate(-360deg);
-      }
-    }
   
 
 
@@ -777,4 +581,40 @@ opacity: 50%;
   font-size: 30px;
   color: rgb(255, 255, 255);
   text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255);
+}
+
+
+
+.intro-title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  color: white;
+  background: black;
+  text-align: center;
+  font-family: "Utara", monospace;
+  text-transform: uppercase;
+  z-index: 2000;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+  text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255);
+	
+}
+
+
+.hidden {
+  opacity: 0;
+  pointer-events: none; /* Prevent interaction while fading */
+}
+
+
+#zoom-wrapper {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 }

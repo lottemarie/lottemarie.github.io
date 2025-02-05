@@ -118,7 +118,7 @@ function Randomiser(el, count, delay) {
 }
 
 Randomiser.prototype.randomise = function() {
-  var charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charSet = 'DMIKOSMOSdmikosmos';
   var i = this.places.length;
 
   while (i--) {
@@ -166,8 +166,8 @@ Randomiser.prototype.run = function() {
 }
 
 // Kick it off
-var lineOne = new Randomiser(document.getElementById('line_01'));
-lineOne.run();
+var introTitle = new Randomiser(document.getElementById('intro-title'));
+introTitle.run();
 
 //Zoom
 document.addEventListener("DOMContentLoaded", () => {
@@ -208,4 +208,19 @@ document.addEventListener("DOMContentLoaded", () => {
       zoomSlider.value = zoomLevel;
       setZoom(zoomLevel);
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const introTitle = document.getElementById("intro-title");
+    const zoomWrapper = document.getElementById("zoom-wrapper");
+
+    setTimeout(() => {
+        // Fade out title
+        introTitle.classList.add("hidden");
+
+        // Fade in solar system
+        setTimeout(() => {
+            zoomWrapper.style.opacity = "1";
+        }, 1000); // Wait 1 second before showing the solar system
+    }, 2000); // Keep the title for 2 seconds before fading out
 });
