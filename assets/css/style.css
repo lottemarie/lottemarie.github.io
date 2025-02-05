@@ -131,7 +131,7 @@ animation-play-state: paused;
 
 
 .orbit:hover {
-animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 
@@ -599,7 +599,7 @@ opacity: 50%;
   background: black;
   text-align: center;
   font-family: "Utara", monospace;
-  text-transform: uppercase;
+  text-transform: lowercase;
   z-index: 2000;
   opacity: 1;
   transition: opacity 2s ease-in-out;
