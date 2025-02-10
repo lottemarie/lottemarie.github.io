@@ -30,8 +30,8 @@
 @font-face {
   font-family: 'Parabole';
   src: url('../fonts/Parabole.woff2') format('woff2');   /* Backup format */     
-  font-weight: normal;
-  font-style: normal;
+  font-weight: bold;
+  font-style: bold;
 }
 
 @font-face {

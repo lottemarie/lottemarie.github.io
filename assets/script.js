@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Define image galleries for each planet
   const galleryImages = {
-    planet1: ["assets/images/08_Dalma.jpg", "assets/images/07_Dalma.jpg", "assets/images/09_Dalma.jpg"],
+    planet1: ["assets/images/10_Dalma_Titel.png", "assets/images/07_Dalma.jpg", "assets/images/09_Dalma.jpg"],
     planet2: ["assets/images/IMG_7368.jpg", "assets/images/IMG_7369.PNG", "assets/images/IMG_7370.PNG"],
     planet3: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7366.jpg", "assets/images/IMG_7367.jpg"],
     planet4: ["assets/images/IMG_7368.jpg", "assets/images/IMG_7369.PNG", "assets/images/IMG_7370.PNG"],
