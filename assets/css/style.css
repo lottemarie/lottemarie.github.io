@@ -619,7 +619,6 @@ animation-play-state: paused;
   text-transform: uppercase;
   z-index: 2000;
   opacity: 1;
-  mix-blend-mode: multiply;
   transition: opacity 2s ease-in-out;
   text-shadw: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255);
 	
@@ -627,7 +626,7 @@ animation-play-state: paused;
 
 
 .hidden {
-  opacity: 0;
+  opacity: 10;
   pointer-events: none; /* Prevent interaction while fading */
 }
 
