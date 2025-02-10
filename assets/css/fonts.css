@@ -12,3 +12,32 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'ARK-ES';
+  src: url('../fonts/ARK-ES-DenseMedium.woff') format('woff');   /* Backup format */     
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mill';
+  src: url('../fonts/Mill.woff') format('woff');   /* Backup format */     
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Parabole';
+  src: url('../fonts/Parabole.woff2') format('woff2');   /* Backup format */     
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TINY';
+  src: url('../fonts/TINY5x3-120.woff') format('woff'),
+       url('../fonts/TINY5x3-120.woff2') format('woff2');   /* Backup format */     
+  font-weight: normal;
+  font-style: normal;
+}

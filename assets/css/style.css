@@ -15,7 +15,6 @@
  
    }
   
-	
 
 
 /* Allgemeine Eigenschaften */
@@ -497,7 +496,8 @@ animation-play-state: paused;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0);
-  color: white;
+  color: rgb(255, 255, 255);
+  mix-blend-mode: difference;
   border: none;
   padding: 10px 15px;
   font-size: 1.5rem;
@@ -556,22 +556,39 @@ animation-play-state: paused;
   transition: transform 0.3s ease-in-out;
 }
 
-/* Styling für den Slider */
+/* Styling for the zoom buttons */
 .zoom-controls {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0);
   padding: 10px;
   border-radius: 10px;
-  z-index: 1000;
+  display: flex;
+  gap: 10px;
 }
 
-#zoom-slider {
-  width: 200px;
-opacity: 50%;
+/* Button style */
+.zoom-controls button {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
 }
+
+/* Hover effect */
+.zoom-controls button:hover {
+  background: lightgray;
+}
+
+
+
+
 
 .label {
   font-family: "Utara", monospace; 
@@ -594,16 +611,16 @@ opacity: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 8rem;
+  font-size: 15rem;
   color: white;
   background: black;
   text-align: center;
-  font-family: "Utara", monospace;
-  text-transform: lowercase;
+  font-family: "Parabole", monospace;
+  text-transform: uppercase;
   z-index: 2000;
   opacity: 1;
   transition: opacity 2s ease-in-out;
-  text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255);
+  text-shadw: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255);
 	
 }
 

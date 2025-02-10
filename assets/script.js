@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Define image galleries for each planet
   const galleryImages = {
-    planet1: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7366.jpg", "assets/images/IMG_7367.jpg"],
+    planet1: ["assets/images/08_Dalma.jpg", "assets/images/07_Dalma.jpg", "assets/images/09_Dalma.jpg"],
     planet2: ["assets/images/IMG_7368.jpg", "assets/images/IMG_7369.PNG", "assets/images/IMG_7370.PNG"],
     planet3: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7366.jpg", "assets/images/IMG_7367.jpg"],
     planet4: ["assets/images/IMG_7368.jpg", "assets/images/IMG_7369.PNG", "assets/images/IMG_7370.PNG"],
@@ -171,44 +171,34 @@ introTitle.run();
 
 //Zoom
 document.addEventListener("DOMContentLoaded", () => {
-  const zoomSlider = document.getElementById("zoom-slider");
+  const zoomInButton = document.getElementById("zoom-in");
+  const zoomOutButton = document.getElementById("zoom-out");
   const zoomWrapper = document.getElementById("zoom-wrapper");
+
+  let zoomLevel = 100; // Default zoom level (100%)
 
   function setZoom(level) {
       zoomWrapper.style.transform = `scale(${level / 100})`;
   }
 
-  // Slider-Steuerung
-  zoomSlider.addEventListener("input", () => {
-      const zoomLevel = parseInt(zoomSlider.value, 10);
-      setZoom(zoomLevel);
-  });
-
-  // Standard-Zoom setzen (100%)
-  setZoom(100);
-
-  let zoomSensitivity = 5; // Höhere Sensitivität für Touchpads
-
-  zoomWrapper.addEventListener("wheel", (event) => {
-      event.preventDefault();
-      
-      let zoomLevel = parseInt(zoomSlider.value, 10);
-      let scrollAmount = event.deltaY;
-
-      // Touchpad-Scrolling ist feiner → Sensitivität anpassen
-      if (Math.abs(scrollAmount) < 50) {
-          scrollAmount *= zoomSensitivity;
+  zoomInButton.addEventListener("click", () => {
+      if (zoomLevel < 200) { // Max zoom
+          zoomLevel += 200;
+          setZoom(zoomLevel);
       }
-
-      // Einheitliche Berechnung für Touchpad & Maus
-      zoomLevel += scrollAmount > 0 ? -5 : 5;
-      zoomLevel = Math.min(200, Math.max(50, zoomLevel)); // Begrenzung
-
-      // Werte aktualisieren
-      zoomSlider.value = zoomLevel;
-      setZoom(zoomLevel);
   });
+
+  zoomOutButton.addEventListener("click", () => {
+      if (zoomLevel > 50) { // Min zoom
+          zoomLevel -= 200;
+          setZoom(zoomLevel);
+      }
+  });
+
+  // Initialize zoom
+  setZoom(zoomLevel);
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const introTitle = document.getElementById("intro-title");

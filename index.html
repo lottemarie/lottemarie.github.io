@@ -15,8 +15,9 @@
     <div class="popup-content">
         <span class="close-popup">&times;</span>
         <h2 id="popup-title" class="popup-title"></h2>
-        <p id="popup-text" class="popup-text"></p>
+        <div id="popup-text" class="popup-hover-text"></div>
         <div id="popup-gallery" class="popup-gallery"></div>
+         
     </div>
 </div>
 
@@ -29,9 +30,10 @@ rel='stylesheet' type='text/css'>
 
 
 <div class="zoom-controls">
-  <label for="zoom-slider"></label>
-  <input type="range" id="zoom-slider" min="20" max="200" value="100" step="10">
+  <button id="zoom-in">+</button>
+  <button id="zoom-out">−</button>
 </div>
+
 
 <div id="zoom-wrapper">
 	 <div class="solar-system">
@@ -42,7 +44,7 @@ rel='stylesheet' type='text/css'>
        <!-- Unfertige Projekte -->
        <div class="orbit">
         <div class="planet one" data-popup="planet1" id="planet1">
-          <img src="assets/images/IMG_7417.jpg" alt="Planet One"/>
+          <img src="assets/images/08_Dalma.jpg" alt="Planet One"/>
         </div>
       </div>
       <div class="orbit">
