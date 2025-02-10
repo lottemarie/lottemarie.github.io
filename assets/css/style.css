@@ -626,7 +626,7 @@ animation-play-state: paused;
 
 
 .hidden {
-  opacity: 10;
+  opacity: 0;
   pointer-events: none; /* Prevent interaction while fading */
 }
 
