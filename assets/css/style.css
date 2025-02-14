@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     transition: transform 0.3s ease;
-    font-family: 'Utara', sans-serif; 
+    font-family:'Parabole', sans-serif; 
  
    }
   
@@ -488,7 +488,9 @@ animation-play-state: paused;
   border-radius: 50%; /* Makes the image circular like the popup */
 }
 
-
+.info {
+  position: absolute;
+}
 
 /* Navigation buttons */
 .gallery-button {
@@ -556,50 +558,6 @@ animation-play-state: paused;
   transition: transform 0.3s ease-in-out;
 }
 
-/* Styling for the zoom buttons */
-.zoom-controls {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0);
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  gap: 10px;
-}
-
-/* Button style */
-.zoom-controls button {
-  background: rgba(0, 0, 0, 0);
-  border: none;
-  color: #fff;
-  padding: 10px 15px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.3s ease-in-out;
-}
-
-/* Hover effect */
-.zoom-controls button:hover {
-  background: lightgray;
-}
-
-
-
-
-
-.label {
-  font-family: "Utara", monospace; 
-  font-weight: normal;
-  text-align: center;
-  text-transform: lowercase;
-  font-size: 30px;
-  color: rgb(255, 255, 255);
-  text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255);
-}
-
 
 
 .intro-title {
@@ -613,25 +571,166 @@ animation-play-state: paused;
   align-items: center;
   font-size: 15rem;
   color: white;
-  background: black;
+  background: rgb(0, 0, 0);
   text-align: center;
   font-family: "Parabole", monospace;
   text-transform: uppercase;
   z-index: 2000;
   opacity: 1;
-  transition: opacity 2s ease-in-out;
-  text-shadw: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px rgb(255, 255, 255), 0px 0px 10px rgb(255, 255, 255);
-	
+  mix-blend-mode: darken;
+
+  animation: fadeOut 1s ease-in-out forwards;
+  animation-delay: 5s;
 }
 
-
-.hidden {
-  opacity: 0;
-  pointer-events: none; /* Prevent interaction while fading */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
 }
 
 
 #zoom-wrapper {
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
+  opacity: 1;
+  transform: scale(3);
+  transition: transform 20s ease-in-out;
 }
+
+/* When the intro title disappears, zoom out */
+@keyframes zoomOut {
+  0% { transform: scale(3); } /* Start at 300% */
+  100% { transform: scale(1); } /* End at 100% */
+}
+
+/* Apply zoom animation after the intro fades */
+.zoom-out {
+  animation: zoomOut 20s ease-in-out forwards;
+  animation-delay: 10s; /* Wait for the title to fade */
+}
+
+/* Info Button - Positioned in the Bottom Right */
+.info-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0);
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.info-button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Hidden Info Text */
+.info-text {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  width: 300px;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: right;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Show Text When Hovering Over the Button */
+.info-button:hover .info-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Impressum Button - Positioned in the Top Right */
+.impressum-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0);
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.impressum-button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Hidden Info Text */
+.impressum-text {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 300px;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Show Text When Hovering Over the Button */
+.impressum-button:hover .impressum-text {
+  opacity: 1;
+  visibility: visible;
+}
+/* Positioning the text on the left 
+.popup-text-left {
+  position: absolute;
+  left: -250px; /* Moves text to the left 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  text-align: right;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Positioning the text on the right 
+.popup-text-right {
+  position: absolute;
+  right: -250px; /* Moves text to the right 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  text-align: left;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Make text visible when popup is active 
+.popup.visible .popup-text-left,
+.popup.visible .popup-text-right {
+  opacity: 1;
+}
+

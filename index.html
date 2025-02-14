@@ -12,13 +12,14 @@
 
   
   <div id="popup" class="popup">
+    <div class="popup-text popup-text-left">Left side text</div>  <!-- Left Text -->
     <div class="popup-content">
         <span class="close-popup">&times;</span>
         <h2 id="popup-title" class="popup-title"></h2>
         <div id="popup-text" class="popup-hover-text"></div>
-        <div id="popup-gallery" class="popup-gallery"></div>
-         
+        <div id="popup-gallery" class="popup-gallery"></div>   
     </div>
+    <div class="popup-text popup-text-right">Right side text</div> <!-- Right Text -->
 </div>
 
 <div
@@ -28,30 +29,48 @@ rel='stylesheet' type='text/css'>
 </div>
 
 
+<!-- Info Button -->
+<div class="info-button">
+  ?
+  <div class="info-text">DMIkosmos ist eine Auwahl an studentischen Projekten, die in Zusammenarbeit zwischen verschiedenen Kursen oder Studiengängen am Department Design der HAW Hamburg entstanden sind.</div>
+</div>
 
-<div class="zoom-controls">
-  <button id="zoom-in">+</button>
-  <button id="zoom-out">−</button>
+<!-- Impressum Button --> 
+<div class="impressum-button">
+  © 
+  <div class="impressum-text"> Impressum <br>
+    © Lotte Rein 2025 <br>
+    lotte.re@web.de <br>
+    
+    HAW Hamburg
+    Kommunikationsdesign BA WiSe 24/25 <br>
+    Im Rahmen des Kurses Let's Platform unter der Leitung von  <br> Stefan Stefanescu und Jan Dufke
+     </div>
 </div>
 
 
-<div id="zoom-wrapper">
-	 <div class="solar-system">
+<div id="zoom-wrapper" class="zoom-out">
+	 <div class="solar-system"> 
 	  <div class="sun"></div>
    </div>
 
 
-       <!-- Unfertige Projekte -->
+    
        <div class="orbit">
         <div class="planet one" data-popup="planet1" id="planet1">
-          <img src="assets/08_Dalma Kopie.png" alt="Planet One"/>
+          <img src="assets/images/08_Dalma.jpg" alt="Planet One"/>
         </div>
       </div>
+
       <div class="orbit">
         <div class="planet two" data-popup="planet2" id="planet2">
+          <div class="info"> 
+          </div>
           <img src="assets/images/IMG_7409.jpg" alt="Planet Two"/>
         </div>
       </div>
+
+
       <div class="orbit">
         <div class="planet three" data-popup="planet3" id="planet3">
           <img src="assets/images/IMG_7425.jpg" alt="Planet Three"/>
