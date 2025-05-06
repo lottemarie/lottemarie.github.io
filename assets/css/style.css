@@ -578,9 +578,8 @@ animation-play-state: paused;
   z-index: 2000;
   opacity: 1;
   mix-blend-mode: darken;
-
-  animation: fadeOut 1s ease-in-out forwards;
-  animation-delay: 5s;
+  animation: fadeOut 0.35s ease-in-out forwards;
+  animation-delay: 6s;
 }
 
 @keyframes fadeOut {
@@ -592,7 +591,7 @@ animation-play-state: paused;
 #zoom-wrapper {
   opacity: 1;
   transform: scale(3);
-  transition: transform 20s ease-in-out;
+  transition: transform 10s ease-in-out;
 }
 
 /* When the intro title disappears, zoom out */
@@ -603,8 +602,8 @@ animation-play-state: paused;
 
 /* Apply zoom animation after the intro fades */
 .zoom-out {
-  animation: zoomOut 20s ease-in-out forwards;
-  animation-delay: 10s; /* Wait for the title to fade */
+  animation: zoomOut 10s ease-in-out forwards;
+  animation-delay: 5s; /* Wait for the title to fade */
 }
 
 /* Info Button - Positioned in the Bottom Right */
@@ -700,6 +699,32 @@ animation-play-state: paused;
   opacity: 1;
   visibility: visible;
 }
+
+.gallery-info-text {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 300px;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+  line-height: 1.4;
+  border-radius: 8px;
+  z-index: 1001; /* Ensure it's above the solar system but not over the popup */
+  
+}
+
+.gallery-info-text h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffd700; /* Example: gold title */
+}
+
+.popup.visible + .gallery-info-text {
+  display: block;
+}
+
 /* Positioning the text on the left 
 .popup-text-left {
   position: absolute;
