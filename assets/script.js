@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     planet3: ["assets/images/Soma_6.jpg","assets/images/Soma_8.png", "assets/images/Soma_1.jpg", "assets/images/Soma_2.jpg", "assets/images/Soma_3.jpg", "assets/images/Soma_4.jpg", "assets/images/Soma_5.jpg"],
     planet4: ["assets/images/hawehrtsich_11.png","assets/images/hawehrtsich_6.png", "assets/images/hawehrtsich_8.png", "assets/images/hawehrtsich_4.png", "assets/images/hawehrtsich_5.png","assets/images/hawehrtsich_7.png", "assets/images/hawehrtsich_9.png", "assets/images/hawehrtsich_10.png"],
     planet5: ["assets/images/LivePS_9.jpg", "assets/images/LivePS_1.jpg", "assets/images/LivePS_7.jpg", "assets/images/LivePS_4.jpg", "assets/images/LivePS_3.jpg", "assets/images/LivePS_6.jpg", "assets/images/LivePS_2.jpg", "assets/images/LivePS_8.jpg"],
-    planet6: ["assets/images/hawburgerfonts_8.jpeg","assets/images/hawburgerfonts_1.jpeg", "assets/images/hawburgerfonts_6.jpeg", "assets/images/hawburgerfonts_7.jpeg"],
+    planet6: ["assets/images/hawburgerfonts_8.jpeg","assets/images/hawburgerfonts_1.jpeg", "assets/images/hawburgerfonts_6.jpeg", "assets/images/hawburgerfonts_3.jpeg"],
     planet7: ["assets/images/Samt_2.JPG", "assets/images/Samt_1.JPG", "assets/images/Samt_3.JPG", "assets/images/Samt_6.JPG", "assets/images/Samt_5.JPG", "assets/images/Samt_4.JPG"],
     planet8: ["assets/images/IMG_7368.jpg", "assets/images/IMG_7369.PNG", "assets/images/IMG_7370.PNG"],
     planet9: ["assets/images/IMG_7365.jpg", "assets/images/IMG_7366.jpg", "assets/images/IMG_7367.jpg"],
