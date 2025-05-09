@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Define image galleries for each planet
   const galleryImages = {
-    planet1: ["assets/images/08_Dalma.jpg", "assets/images/07_Dalma.jpg", "assets/images/02_Dalma.jpg", "assets/images/09_Dalma.jpg", "assets/images/01_Dalma.jpg", "assets/images/04_Dalma_Info.png"],
-    planet2: ["assets/images/Call_Me_4.JPG", "assets/images/Call_Me_1.JPG", "assets/images/Call_Me_3.JPG", "assets/images/Call_Me_2.JPG"],
+    planet1: ["assets/images/08_Dalma.jpg", "assets/images/07_Dalma.jpg", "assets/images/02_Dalma.jpg", "assets/images/09_Dalma.jpg", "assets/images/01_Dalma.jpg", "assets/images/04_Dalma.jpg", "assets/images/06_Dalma.jpg"],
+    planet2: ["assets/images/Call_Me_9.jpeg", "assets/images/Call_Me_8.jpeg", "assets/images/Call_Me_11.jpeg", "assets/images/Call_Me_14.jpeg", "assets/images/Call_Me_16.jpeg", "assets/images/Call_Me_13.jpeg", "assets/images/Call_Me_12.jpeg"],
     planet3: ["assets/images/Soma_6.jpg","assets/images/Soma_8.png", "assets/images/Soma_1.jpg", "assets/images/Soma_2.jpg", "assets/images/Soma_3.jpg", "assets/images/Soma_4.jpg", "assets/images/Soma_5.jpg"],
     planet4: ["assets/images/hawehrtsich_11.png","assets/images/hawehrtsich_6.png", "assets/images/hawehrtsich_8.png", "assets/images/hawehrtsich_4.png", "assets/images/hawehrtsich_5.png","assets/images/hawehrtsich_7.png", "assets/images/hawehrtsich_9.png", "assets/images/hawehrtsich_10.png"],
     planet5: ["assets/images/LivePS_9.jpg", "assets/images/LivePS_1.jpg", "assets/images/LivePS_7.jpg", "assets/images/LivePS_4.jpg", "assets/images/LivePS_3.jpg", "assets/images/LivePS_6.jpg", "assets/images/LivePS_2.jpg", "assets/images/LivePS_8.jpg"],
